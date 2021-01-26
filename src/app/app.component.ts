@@ -30,4 +30,8 @@ export class AppComponent implements OnInit{
       return ((el.name.toLowerCase().search(searchValue) > -1 || el.email.toLowerCase().search(searchValue) > -1) ) &&  el.departments.indexOf(value) > -1 ;
     });
    }
+
+   resetData() {
+    this.data = this.dataService.getData();
+  }
 }

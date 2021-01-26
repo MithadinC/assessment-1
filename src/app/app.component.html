@@ -8,8 +8,8 @@
      <option *ngFor="let dept of departments" [value]="dept">{{dept}}</option>
    </select>
    <input type="text" [(ngModel)]="searchData" placeholder="Name / Email"/>
-   <button (click)="onSearch(dept.value)">Search</button
-   <button >Reset and Reload Data</button>
+   <button (click)="onSearch(dept.value)">Search</button>
+   <button (click)="resetData()">Reset and Reload Data</button>
    <select >
       <option selected>name(a-z)</option>
       <option >name(a-z)</option>
