@@ -3,7 +3,19 @@
  <hr>
 
  <div>
-   
+   <select #dept (change)='onDeptOptionsSelected(dept.value)'>
+      <option selected>--- Departments ---</option>
+     <option *ngFor="let dept of departments" [value]="dept">{{dept}}</option>
+   </select>
+   <input type="text" placeholder="Name / Email"/>
+   <button >Search</button>
+   <button >Reset and Reload Data</button>
+   <select >
+      <option selected>name(a-z)</option>
+      <option >name(a-z)</option>
+      <option >age</option>
+      <option >email</option>
+    </select>
  </div>
 
  <table class="table">
@@ -20,7 +32,7 @@
         <td>{{emp.name}}</td>
         <td>{{emp.age}}</td>
         <td>{{emp.email}}</td>
-        <td><span title="{{emp.departments.toString()}}">{{emp.departments.length}}</span></td>
+        <td><span title="{{emp.departments.toString()}}">{{emp.departments.length}}  {{emp.departments.toString()}}</span></td>
       </tr>
     </tbody>
  </table>
