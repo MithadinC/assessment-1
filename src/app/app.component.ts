@@ -25,8 +25,9 @@ export class AppComponent implements OnInit{
    }
 
    onSearch(value: string) {
+    const searchValue: string = this.searchData.toLowerCase();
     this.data = this.dataService.getData().filter((el) => {
-      return ((el.name.toLowerCase().search(this.searchData) > -1 || el.email.toLowerCase().search(this.searchData) > -1) ) &&  el.departments.indexOf(value) > -1 ;
+      return ((el.name.toLowerCase().search(searchValue) > -1 || el.email.toLowerCase().search(searchValue) > -1) ) &&  el.departments.indexOf(value) > -1 ;
     });
    }
 }
