@@ -34,4 +34,9 @@ export class AppComponent implements OnInit{
    resetData() {
     this.data = this.dataService.getData();
   }
+
+  sortOrderChange(value: string) {
+    this.dataService.setSortOrder(value);
+    this.data = this.dataService.getData();
+  }
 }

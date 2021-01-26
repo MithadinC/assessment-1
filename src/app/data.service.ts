@@ -8,8 +8,18 @@ export class DataService {
 
   constructor() { }
 
+  sortOrder: string = "nameasc";
+
+  setSortOrder(order: string) {
+    this.sortOrder = order;
+  }
+
+  getSortOrder(): string {
+    return this.sortOrder;
+  }
+
   getData(): any[] {
-    return this.getDataSorted("");;
+    return this.getDataSorted(this.getSortOrder());
   }
 
   getDepartments() {
