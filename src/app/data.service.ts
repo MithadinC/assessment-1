@@ -9,7 +9,7 @@ export class DataService {
   constructor() { }
 
   getData(): any[] {
-    return this.getDataSorted("nameasc");;
+    return this.getDataSorted("");;
   }
 
   getDepartments() {
@@ -30,7 +30,35 @@ export class DataService {
         }
         return 0;
       });
+    } else if (sortType === "namedsc") {
+      return employees.sort((a, b) => {
+        let fa = a.name.toLowerCase(),
+          fb = b.name.toLowerCase();
+        if (fa < fb) {
+          return 1;
+        }
+        if (fa > fb) {
+          return -1;
+        }
+        return 0;
+      });
+    } else if (sortType === "emailasc") {
+      return employees.sort((a, b) => {
+        let fa = a.email.toLowerCase(),
+          fb = b.email.toLowerCase();
+        if (fa < fb) {
+          return -1;
+        }
+        if (fa > fb) {
+          return 1;
+        }
+        return 0;
+      });
+    } else {
+      return employees.sort((a, b) => {
+        return a.age - b.age;
+      });
     }
-  }
+  } 
 
 }
