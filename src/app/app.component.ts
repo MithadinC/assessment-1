@@ -10,6 +10,7 @@ export class AppComponent implements OnInit{
   title = 'assessment';
   data: any[];
   departments: any[];
+  searchData: string;
    constructor(private dataService: DataService) {}
 
    ngOnInit() {
@@ -20,6 +21,12 @@ export class AppComponent implements OnInit{
    onDeptOptionsSelected(value: string) {
     this.data = this.dataService.getData().filter((el) => {
       return el.departments.indexOf(value) > -1;
+    });
+   }
+
+   onSearch(value: string) {
+    this.data = this.dataService.getData().filter((el) => {
+      return ((el.name.toLowerCase().search(this.searchData) > -1 || el.email.toLowerCase().search(this.searchData) > -1) ) &&  el.departments.indexOf(value) > -1 ;
     });
    }
 }
