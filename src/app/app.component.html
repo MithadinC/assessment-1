@@ -1,0 +1,27 @@
+ <h1>Employee Details {{data.length}}</h1>
+
+ <hr>
+
+ <div>
+   
+ </div>
+
+ <table class="table">
+    <thead>
+      <tr>
+        <th>Emp Name</th>
+        <th>Age</th>
+        <th>Email Address</th>
+        <th>Departments</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of data">
+        <td>{{emp.name}}</td>
+        <td>{{emp.age}}</td>
+        <td>{{emp.email}}</td>
+        <td><span title="{{emp.departments.toString()}}">{{emp.departments.length}}</span></td>
+      </tr>
+    </tbody>
+ </table>
+
