@@ -11,6 +11,7 @@ margin-left: 20px;
 }
 .searchByNameAndEmail{
     margin-left: 30px;
+    width: 30%;
     }
 .btnSpace{
     box-shadow: 3px 3px grey;
@@ -18,7 +19,7 @@ margin-left: 20px;
 }
 
 #employees {
-    font-family: Arial, Helvetica, sans-serif;
+    
     border-collapse: collapse;
     border:2px solid black;
     width: 100%;
