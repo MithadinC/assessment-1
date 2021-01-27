@@ -34,13 +34,7 @@ export const employees = [
     age: 70,
     email: "Six@gmail.com",
     departments: ["Computer", "Physics"],
-  },
-  {
-    name: "Employee Seven",
-    age: 60,
-    email: "seven@gmail.com",
-    departments: ["Computer", "Physics"],
-  },
+  }
 ];
 
 /*

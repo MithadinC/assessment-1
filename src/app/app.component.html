@@ -3,22 +3,22 @@
  <hr>
 
  <div>
-   <select #dept (change)='onDeptOptionsSelected(dept.value)'>
-      <option selected>--- Departments ---</option>
+   <select class="dept" #dept (change)='onDeptOptionsSelected(dept.value)'>
+      <option selected>Department</option>
      <option *ngFor="let dept of departments" [value]="dept">{{dept}}</option>
    </select>
-   <input type="text" [(ngModel)]="searchData" placeholder="Name / Email"/>
-   <button (click)="onSearch(dept.value)">Search</button>
-   <button (click)="resetData()">Reset and Reload Data</button>
-   <select #sort (change)="sortOrderChange(sort.value)">
-    <option selected value="nameasc">name(a-z)</option>
+   <input type="text" [(ngModel)]="searchData" placeholder="Name / Email" class="searchByNameAndEmail">
+   <button (click)="onSearch(dept.value)" class="btnSpace">Search</button>
+   <button (click)="resetData()" class="btnSpace" >Reset and Reload Data</button>
+   <select class="shortBy" #sort (change)="sortOrderChange(sort.value)" style="text-align: right">
+    <option >Sort By</option>
+    <option value="nameasc">name(a-z)</option>
     <option value="namedsc">name(z-a)</option>
     <option value="ageasc">age</option>
     <option value="emailasc">email</option>
   </select>
  </div>
-
- <table class="table">
+ <table id="employees">
     <thead>
       <tr>
         <th>Emp Name</th>
