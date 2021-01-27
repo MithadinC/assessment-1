@@ -11,8 +11,8 @@
    <button (click)="onSearch(dept.value)" class="btnSpace">Search</button>
    <button (click)="resetData()" class="btnSpace" >Reset and Reload Data</button>
    <select class="shortBy" #sort (change)="sortOrderChange(sort.value)" style="text-align: right">
-    <option >Sort By</option>
-    <option value="nameasc">name(a-z)</option>
+    <option>Sort By</option>
+    <option selected value="nameasc">name(a-z)</option>
     <option value="namedsc">name(z-a)</option>
     <option value="ageasc">age</option>
     <option value="emailasc">email</option>
